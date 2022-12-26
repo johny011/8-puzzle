@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/puzzle.css' %}">
+    <title>Title</title>
+</head>
+
+<body class="bg-dark">
+
+
+    <form id="form1" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="start0" id="start0">
+            <input type="hidden" name="start1" id="start1">
+            <input type="hidden" name="start2" id="start2">
+            <input type="hidden" name="start3" id="start3">
+            <input type="hidden" name="start4" id="start4">
+            <input type="hidden" name="start5" id="start5">
+            <input type="hidden" name="start6" id="start6">
+            <input type="hidden" name="start7" id="start7">
+            <input type="hidden" name="start8" id="start8">
+
+            <input type="hidden" name="end0" id="end0">
+            <input type="hidden" name="end1" id="end1">
+            <input type="hidden" name="end2" id="end2">
+            <input type="hidden" name="end3" id="end3">
+            <input type="hidden" name="end4" id="end4">
+            <input type="hidden" name="end5" id="end5">
+            <input type="hidden" name="end6" id="end6">
+            <input type="hidden" name="end7" id="end7">
+            <input type="hidden" name="end8" id="end8">
+
+
+        <div class="container py-1 my-3">
+            <div class="col-md-12 d-flex justify-content-between mb-5">
+                <div class="col-md-6">
+                    <h3 class="text-center text-danger my-4">Start</h3>
+                    <div class="_8puzzle m-auto bg-secondary position-relative" id="puzzle_start">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center text-danger my-4">End</h3>
+                    <div class="_8puzzle m-auto bg-secondary position-relative" id="puzzle_end">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 m-auto d-flex justify-content-center my-4 py-4">
+
+                <button class="btn btn-danger" type="button" onclick="Submit()"> Start Game</button>
+            </div>
+        </div>
+    </form>
+    <script src="{%  static 'js/home.js' %}"></script>
+    <script src="{%  static 'js/bootstrap.bundle.min.js' %}"></script>
+
+
+</body>
+
+</html>
