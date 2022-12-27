@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for i in puzzles %}
+        <div class="d-block m-5">
+            {% for j in i %}
+            <div class="d-blcok">
+                {% for k in j%}
+                <span class="item">{{k}}</span>
+                {% endfor %}
+            </div>
+
+            {% endfor %}
+        </div>
+        {% endfor %}
+</body>
+</html>

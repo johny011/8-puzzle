@@ -1,0 +1,82 @@
+._8puzzle{
+    width: 25rem;
+    height: 25rem;
+    box-sizing: border-box;
+    border-radius: 3px;
+    outline: 0.5rem solid cyan;
+}
+.block{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 3px;
+    animation-duration: 0.3s;
+    animation-fill-mode:both;
+}
+
+@keyframes UpToRow1 {
+    from{
+        top:8.5rem;
+    }
+    to{
+        top:0.25rem;
+    }
+}
+@keyframes UpToRow2 {
+    from{
+        top:16.75rem;
+    }
+    to{
+        top:8.5rem;
+    }
+}
+@keyframes DownToRow2 {
+    from{
+        top:0.25rem;
+    }
+    to{
+        top:8.5rem;
+    }
+}
+@keyframes DownToRow3 {
+    from{
+        top:8.5rem;
+    }
+    to{
+        top:16.75rem;
+    }
+}
+
+@keyframes LeftToCol1 {
+    from{
+        left:8.5rem;
+    }
+    to{
+        left:0.25rem;
+    }
+}
+@keyframes LeftToCol2 {
+    from{
+        left:16.75rem;
+    }
+    to{
+        left:8.5rem;
+    }
+}
+
+@keyframes RightToCol2 {
+    from{
+        left:0.25rem;
+    }
+    to{
+        left:8.5rem;
+        
+    }
+}
+@keyframes RightToCol3 {
+    from{
+        left:8.5rem;
+    }
+    to{
+        left:16.75rem;
+    }
+}
